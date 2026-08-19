@@ -62,6 +62,30 @@ work best); every entry appears on the services page regardless.
 **Change contact details** — edit `SITE`. Email, phone, WhatsApp and Instagram are wired
 into the header, footer, contact page and the floating WhatsApp button from that one object.
 
+## Colours
+
+The palette is a light, earthy savanna scheme — sand page, dry-clay surfaces, bark text and
+a terracotta accent — defined as custom properties at the top of `assets/css/styles.css`:
+
+| Token | Value | Used for |
+| --- | --- | --- |
+| `--bg` | `#f7f2e8` sand | page background |
+| `--bg-elev` | `#efe8d9` dry clay | cards, footer, form fields |
+| `--bg-elev-2` | `#e4dac6` deep clay | focused fields, hover states |
+| `--text` | `#2b241b` bark | body copy and headings |
+| `--muted` | `#5e5445` warm stone | secondary text |
+| `--accent` | `#8f4a28` terracotta | buttons, labels, links, rules |
+| `--accent-bright` | `#73391e` burnt umber | accent hover |
+
+Changing those seven values re-skins the whole site. Every text/background pairing above
+clears WCAG AA (4.5:1 for body text), so if you swap them, keep the accent dark enough to
+stay legible on all three surfaces — not just on `--bg`.
+
+Two things stay dark on purpose and are **not** controlled by those tokens: text sitting on
+a photograph (the hero and the category tiles, which keep a warm scrim behind white text via
+the `--on-photo-*` and `--scrim` tokens), and the lightbox, because photographs read best
+against a dark surround.
+
 ## Photographs
 
 Images currently load from the WordPress media library the old site used
